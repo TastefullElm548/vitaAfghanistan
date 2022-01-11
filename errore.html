@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>La Vita in Afghanistan</title>
+    <link rel="icon" type="image/x-icon" href="Play/Play.png">
+</head>
+<body>
+  <div>
+    <div>Errore 0x001<br><br><p id="txt">Il browser in uso non è attualmente supportato!</p></div><br><a href="microsoft-edge:newtab" id="link" onclick="cambiaLink()">Apri Microsoft Edge</a>
+  </div>
+  <script>
+  function linkNuovo() {
+    document.getElementById("link").setAttribute('target',"_blank");
+    document.getElementById("link").setAttribute('href',"https://masos.my.to/vita-afghanistan/fix/001");
+  }
+  function cambiaLink() {
+    document.getElementById("txt").textContent = "Non si è aperto nulla?";
+    document.getElementById("link").textContent = "Scarica Microsoft Edge";
+    setTimeout(linkNuovo, 1000);
+  }
+  </script>
+</body>
+</html>
