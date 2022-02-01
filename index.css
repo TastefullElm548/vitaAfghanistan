@@ -10,7 +10,7 @@ body{
   justify-content: center;
   min-height: 100vh;
   text-align: center;
-  background-image: url("play/Afghanistan.jpg");
+  background-image: url("Play/Afghanistan.jpg");
   background-size: cover;
 }
 .container{
