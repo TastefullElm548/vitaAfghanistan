@@ -67,7 +67,7 @@ if (sUsrAg.indexOf("Firefox") > -1) {
   sBrowser = "unknown";
 }
 
-function siSupportato () {
+function supportato () {
    window.location.replace("Play/play.html");
 }
 
@@ -76,7 +76,7 @@ function nonSupportato () {
 }
 
 if (sBrowser === "Microsoft Edge") {
-   setTimeout(siSupportato, 5000)
+   setTimeout(supportato, 5000)
 } else {
    nonSupportato();
 }
