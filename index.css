@@ -10,7 +10,7 @@ body{
   justify-content: center;
   min-height: 100vh;
   text-align: center;
-  background-image: url("https://github.com/TastefullElm548/La-Vita-in-Afghanistan/blob/e3d9ccf5e6a8285b08b7706636258115d1dc8f3f/Play/Afghanistan.jpg");
+  background-image: url("play/Afghanistan.jpg");
   background-size: cover;
 }
 .container{

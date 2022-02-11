@@ -1,11 +1,13 @@
 <!DOCTYPE html>
+<!-- Design Created By CodingNepal -->
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <title>La Vita in Afghanistan</title>
-    <link rel="stylesheet" href="select.css">
+    <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="icon" type="image/x-icon" href="Play.png">
+    <script type="text/javascript" src="dPoints.js"></script>
 </head>
 <body>
   <div class="wrapper">
@@ -15,27 +17,13 @@
       </div>
     </div>
     <div class="name" id="titolo">La Vita in Afghanistan</div>
-    <div class="about" id="descrizione">Da che punto di vista vuoi giocare?</div>
+    <div class="about" id="domanda">Sei nato in Afghanistan e, da allora, ti è stato insegnato che sei più importante delle tue sorelle, che dovrai lavorare e che il loro scopo è solo quello di fare figli per continuare un'altra famiglia. Ti stai facendo qualche domanda?</div><div id="vita"><br>⚠️ <p id="counter">45</p></div>
     <br>
-    <div class="buttons">
-      <button onclick="window.location.href='Donna/Donna.html'">👧 Donna</button>
-      <button class="disabledcol" onclick="window.location.href='Uomo/Uomo.html'">👦 Uomo</button>
+    <div class="buttons" id="btnManagement">
+      <button id="btn1" onclick="next(0, 1)">No</button>
+      <button id="btn2" onclick="next(2, 2)">Si, ne parlerò con i miei genitori</button>
+      <button id="btn3" onclick="next(10, 3)">Si, ne parlerò a scuola</button>
     </div>
   </div>
-  <script>
-    function apriPopupDisinstalla(){
-      let text;
-    if (confirm("Vuoi disinstallare La Vita in Afghanistan?") == true) {
-    titleText = "Disinstallazione in Corso";
-    descrizioneText = "Dovrebbe apparire una finestra con la procedura guidata per la disinstallazione"
-      }
-      else
-      {
-        text = getElementById("titolo")
-      }
-    document.getElementById("titolo").innerHTML = titleText;
-    document.getElementById("descrizione").innerHTML = descrizioneText;
-      }
-  </script>
 </body>
 </html>
