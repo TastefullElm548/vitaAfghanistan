@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <head>
     <meta http-equiv="refresh" content="0; URL='https://masos.my.to/vita-afghanistan/download'" />
-    <style>
-        body {
-            background: rgb(57,73,171);
-            background: linear-gradient(90deg, rgba(57,73,171,1) 0%, rgba(0,172,193,1) 100%);
-            text-align: center;
-            color: white;
-            font-family: 'Rajdhani', sans-serif;
-            font-weight: bold;
-            font-size: 25px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>La Vita in Afghanistan</title>
+    <link rel="stylesheet" href="Play/play.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="icon" type="image/x-icon" href="Play/Play.png">
 </head>
 <body>
+    <div class="wrapper">
+        <div class="img-area">
+          <div class="inner-area">
+            <img src="Play/Play.png" alt="Play">
+          </div>
+        </div>
+        <div class="name" id="titolo">La Vita in Afghanistan</div>
+        <div class="about" id="descrizione">"Vivi" dal punto di vista di un/una Afghano/a e prova a sopravvivere nonostante le leggi dei talebani!</div>
+        <br>
+        <div class="buttons">
+          <button onclick="download()">Scaricalo di nuovo</button>
+          <button onclick="window.location.href='Play/play.html'">Gioca Online</button>
+        </div>
+    </div>    
+
+
+
+
     <button onclick="download()">Se il download non inizia, clicca qui</button>
     <script>
         function download(){
