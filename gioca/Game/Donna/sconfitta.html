@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>La Vita in Afghanistan</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="icon" type="image/x-icon" href="Play.png">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="img-area">
+      <div class="inner-area">
+        <img src="Play.png" alt="Play">
+      </div>
+    </div>
+    <div class="name" id="titolo">Hai Perso</div>
+    <div class="about" id="descrizione">Non sei riuscita a sopravvivere ad una vita oppressa dai talebani. Speriamo che il tuo esempio possa servire alle generazioni future per realizzare il tuo sogno di uno stato libero in cui i diritti vengono rispettati! 🏆<br><br>Ricorda: <br> Conoscere il problema è importante, <br> ma mai quanto le azioni concrete!</div>
+    <br>
+    <div class="buttons">
+      <button onclick="vai()">Scopri un nuovo modo per contribuire a cambiare il mondo</button>
+      <button onclick="window.history.go(-1)">Gioca Ancora</button>
+    </div>
+  </div>
+<script>
+    var gliURL = [
+    "https://masos.my.to/link/change-world/0",
+    "https://masos.my.to/link/change-world/1",
+    "https://masos.my.to/link/change-world/2",
+    "https://masos.my.to/link/change-world/3",
+    "https://masos.my.to/link/change-world/4",
+    "https://masos.my.to/link/change-world/5",
+    "https://masos.my.to/link/change-world/6",
+    "https://masos.my.to/link/change-world/7",
+    "https://masos.my.to/link/change-world/8",
+    "https://masos.my.to/link/change-world/9",
+    ];
+
+    function vai() {
+        var nURL = Math.floor(Math.random() * gliURL.length);
+        window.open(gliURL[nURL]);
+    }
+</script>
+</body>
+</html>
