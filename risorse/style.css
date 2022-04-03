@@ -10,7 +10,7 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: url("Afghanistan.jpg");
+  background-image: url("sfondo.jpg");
   background-size: cover;
 }
 .wrapper,
@@ -51,9 +51,6 @@ body{
 }
 .wrapper .icon.arrow{
   left: 15px;
-}
-.wrapper .icon.dots{
-  right: 15px;
 }
 .wrapper .img-area{
   height: 150px;
@@ -319,83 +316,4 @@ body{
  
  .field input:focus ~ label{
    opacity: 0;
- }
-  
- 
- button{
-   margin: 35px 0 0 0;
-   width: 90%;
-   height: 50px;
-   color: #000;
-   font-size: 18px;
-   padding: 5px 20px;
-   font-weight: 600;
-   background: #dde1e7;
-   border: none;
-   outline: none;
-   cursor: pointer;
-   border-radius: 25px;
-   box-shadow: 2px 2px 5px #babecc,
-               -5px -5px 10px #ffffff73;
- }
- 
- .popup .close-btn:hover,
- button:focus{
-   color: #3498db;
-   box-shadow: inset 2px 2px 5px #babecc,
-               inset -5px -5px 10px #ffffff73;
- }
- .content .or{
-   color: black;
-   margin-top: 13px;
- }
-  
- .icon-button{
-   margin-top: 25px;
- }
- .icon-button span{
-   padding-left: 27px;
-   padding-right: 27px;
-   padding-top: 10px;
-   padding-bottom: 10px;
-  
-   color: #000;
-   border-radius: 5px;
-   line-height: 30px;
-   
-   background: #dde1e7;
-   box-shadow: 2px 2px 5px #babecc,
-               -5px -5px 10px #ffffff73;
- }
- .icon-button span.facebook{
-   margin-right: 17px;
- 
- }
- .icon-button span:hover{
-   color: #3498db;
-   box-shadow: inset 2px 2px 5px #babecc,
-               inset -5px -5px 10px #ffffff73;
- }
- 
- 
- .first-button {
- color: rgb(0, 0, 0);
- font-size: 20px;
- font-weight: 500;
- padding: 13px 40px;
- border-radius: 10px;
- border: none;
- position: absolute;
- top: 50%;
- left: 40%;
- transform: translate(-50%, -50%);
- background: #dde1e7;
- box-shadow: -3px -3px 7px #ffffff73,
-               2px 2px 5px rgba(94, 104, 121, 0.288); 
- transition: box-shadow .35s ease !important;
- outline: none;
- }
- 
- .field input::placeholder{
- margin-left: 10px;
  }
