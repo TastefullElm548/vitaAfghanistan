@@ -107,3 +107,6 @@ body{
 .buttons button:last-child{
   margin-left: 10px;
 }
+#terzoPulsante{
+  font-weight: bolder;
+}
