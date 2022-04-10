@@ -10,7 +10,7 @@ function downloadOriginale() {
 }
 // Apertura scelta personaggio
 function gioca() {
-    window.location.href='play/Game/select.html';
+    window.location.href='play';
 }
 
 // Apertura informazioni
@@ -25,10 +25,10 @@ function indietro(destinazione) {
 
 // Aprire fonti
 function apriFonti() {
-    window.location.href='GiocoLegacy/fonti.html'
+    window.location.href='../GiocoLegacy/fonti.html'
 }
 
 // Aprire crediti
 function apriCrediti() {
-    window.location.href='GiocoLegacy/crediti.html'
+    window.location.href='../GiocoLegacy/crediti.html'
 }
