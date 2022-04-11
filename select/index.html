@@ -19,23 +19,9 @@
     <div class="about" id="descrizione">Da che punto di vista vuoi giocare?</div>
     <br>
     <div class="buttons">
-      <button onclick="donna()">👧 Donna</button>
-      <button onclick="uomo()">👦 Uomo</button>
+      <button onclick="seleziona('donna')">👧 Donna</button>
+      <button onclick="seleziona('uomo')">👦 Uomo</button>
     </div>
   </div>
-  <script>
-    function donna() {
-      let text = "Vuoi Continuare come Donna? \n \n Le scelte ti riguarderanno personalmente, rivendica i tuoi diritti riuscendo a sopravvivere \n \n Livello di difficoltà: Difficile";
-      if (confirm(text) == true) {
-        vai('donna/donna.html');
-      }
-    }
-    function uomo() {
-      let text = "Vuoi Continuare come Uomo? \n \n Le scelte riguarderanno il tuo pensiero nei confronti dei diritti delle donne e dei talebani, fai la cosa giusta riuscendo a sopravvivere \n \n Livello di difficoltà: Medio";
-      if (confirm(text) == true) {
-        vai('uomo/uomo.html');
-      }
-    }
-  </script>
 </body>
 </html>
