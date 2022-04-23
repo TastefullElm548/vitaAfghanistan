@@ -1,23 +1,16 @@
 let puntiVita = 45;
 let domande = ["Sei nato in Afghanistan e, da allora, ti è stato insegnato che sei più importante delle tue sorelle, che dovrai lavorare e che il loro scopo è solo quello di fare figli per continuare un'altra famiglia. Ti stai facendo qualche domanda?",
-                 "La tua famiglia inizia a pensare al futuro tuo, dei tuoi fratelli e delle tue sorelle. Ti dicono che te e i tuoi fratelli sarete promessi sposi alla ragazza che vorrete, mentre le tue sorelle dovranno accettare le proposte degli altri uomini. Cosa ne pensi?",
-                 "È arrivato il tuo turno. La tua famiglia si offre per aiutare la famiglia delle tue cugine e ti chiede se te ne interessa una. Cosa vuoi rispondere?",
-                 "Vorresti leggere queste leggi, i libri sacri che ti riguardano e scoprire la storia dell'Afghanistan. Cosa fai?",
-                 "Finalmente ti sposi. Tua moglie sembra preoccupata per ciò che le è stato raccontato dopo il matrimonio, ma tu sei diverso! Tu sei migliore! Come passi la prima giornata 'normale' con lei?",
-                 "Decidete di avere dei figli. Come agirete?",
-                 "Ormai sei considerato un 'Anziano'. Sei orgoglioso dei tuoi figli e vuoi lasciare al mondo un lascito di libertà. Ti proponi alle elezioni come ultima buona azione della tua vita! Cosa proponi?"];
-let btn1 = ["No",
-            "Sarà giusto così",
-            "Mi interessa...",
-            "Credo al sentito dire",
-            "Normalmente",
-            "Li crescerò come sono stato cresciuto io",
-            "Applicazione di leggi più \"libere\""];
-
+               "La tua famiglia inizia a pensare al futuro tuo, dei tuoi fratelli e delle tue sorelle. Ti dicono che te e i tuoi fratelli sarete promessi sposi alla ragazza che vorrete, mentre le tue sorelle dovranno accettare le proposte degli altri uomini. Cosa ne pensi?",
+               "È arrivato il tuo turno. La tua famiglia si offre per aiutare la famiglia delle tue cugine e ti chiede se te ne interessa una. Cosa vuoi rispondere?",
+               "Vorresti leggere queste leggi, i libri sacri che ti riguardano e scoprire la storia dell'Afghanistan. Cosa fai?",
+               "Finalmente ti sposi. Tua moglie sembra preoccupata per ciò che le è stato raccontato dopo il matrimonio, ma tu sei diverso! Tu sei migliore! Come passi la prima giornata 'normale' con lei?",
+               "Decidete di avere dei figli. Come agirete?",
+               "Ormai sei considerato un 'Anziano'. Sei orgoglioso dei tuoi figli e vuoi lasciare al mondo un lascito di libertà. Ti proponi alle elezioni come ultima buona azione della tua vita! Cosa proponi?"];
+let testoPulsante1 = ["No", "Sarà giusto così", "Mi interessa...", "Credo al sentito dire", "Normalmente", "Li crescerò come sono stato cresciuto io", "Applicazione di leggi più \"libere\""];
+let testoPulsante2 = ["Si, ne parlerò con i miei genitori", "Ne parlo con i miei", "Non mi interessano", "Cerco dei libri tra amici e cugini", "Parlando dei suoi diritti perduti", "Li crescerò raccontandogli piccoli insegnamenti", "Abolizione delle leggi peggiori"]
 
 var counterArrays = 0;
 var nBtnVar = "";
-var btn2var = [0, "Ne parlo con i miei", "Non mi interessano", "Cerco dei libri tra amici e cugini", "Parlando dei suoi diritti perduti", "Li crescerò raccontandogli piccoli insegnamenti", "Abolizione delle leggi peggiori"];
 var btn3var = [0, "Protesto per far si che non siano obbligate", "Dovrei chiedere il loro parere, no?", "Cerco libri in giro per i mercati", "Andando in giro non curanti delle leggi", "Li crescero senza mandarli alle scuole 'talebane'", "Abolizione del dominio talebano e liberazione dell'Afghanistan"];
 
 var a0 = "Conseguenze: \n \nEssere troppo ingenui, a volte, fa accorgere delle cose quando è troppo tardi";
@@ -63,9 +56,9 @@ function explain() {
 function nextQuestion() {
     counterArrays = counterArrays + 1;
     document.getElementById("domanda").textContent = domande[counterArrays]
-    document.getElementById("btn1").textContent = btn1[counterArrays]
-    document.getElementById("btn2").textContent = btn2[counterArrays]
-    document.getElementById("btn3").textContent = btn3[counterArrays]
+    document.getElementById("btn1").textContent = testoPulsante1[counterArrays]
+    document.getElementById("btn2").textContent = testoPulsante2[counterArrays]
+    document.getElementById("btn3").textContent = testoPulsante3[counterArrays]
 }
 
 function indietro() {
