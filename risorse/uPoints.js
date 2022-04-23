@@ -6,9 +6,17 @@ let domande = ["Sei nato in Afghanistan e, da allora, ti è stato insegnato che 
                  "Finalmente ti sposi. Tua moglie sembra preoccupata per ciò che le è stato raccontato dopo il matrimonio, ma tu sei diverso! Tu sei migliore! Come passi la prima giornata 'normale' con lei?",
                  "Decidete di avere dei figli. Come agirete?",
                  "Ormai sei considerato un 'Anziano'. Sei orgoglioso dei tuoi figli e vuoi lasciare al mondo un lascito di libertà. Ti proponi alle elezioni come ultima buona azione della tua vita! Cosa proponi?"];
+let btn1 = ["No",
+            "Sarà giusto così",
+            "Mi interessa...",
+            "Credo al sentito dire",
+            "Normalmente",
+            "Li crescerò come sono stato cresciuto io",
+            "Applicazione di leggi più \"libere\""];
+
+
 var counterArrays = 0;
 var nBtnVar = "";
-var btn1var = [0, "Sarà giusto così", "Mi interessa...", "Credo al sentito dire", "Normalmente", "Li crescerò come sono stato cresciuto io", "Applicazione di leggi più 'libere'"];
 var btn2var = [0, "Ne parlo con i miei", "Non mi interessano", "Cerco dei libri tra amici e cugini", "Parlando dei suoi diritti perduti", "Li crescerò raccontandogli piccoli insegnamenti", "Abolizione delle leggi peggiori"];
 var btn3var = [0, "Protesto per far si che non siano obbligate", "Dovrei chiedere il loro parere, no?", "Cerco libri in giro per i mercati", "Andando in giro non curanti delle leggi", "Li crescero senza mandarli alle scuole 'talebane'", "Abolizione del dominio talebano e liberazione dell'Afghanistan"];
 
@@ -55,9 +63,9 @@ function explain() {
 function nextQuestion() {
     counterArrays = counterArrays + 1;
     document.getElementById("domanda").textContent = domande[counterArrays]
-    document.getElementById("btn1").textContent = btn1var[counterArrays]
-    document.getElementById("btn2").textContent = btn2var[counterArrays]
-    document.getElementById("btn3").textContent = btn3var[counterArrays]
+    document.getElementById("btn1").textContent = btn1[counterArrays]
+    document.getElementById("btn2").textContent = btn2[counterArrays]
+    document.getElementById("btn3").textContent = btn3[counterArrays]
 }
 
 function indietro() {
