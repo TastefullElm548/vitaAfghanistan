@@ -7,11 +7,13 @@ let domande = ["Sei nato in Afghanistan e, da allora, ti è stato insegnato che 
                "Decidete di avere dei figli. Come agirete?",
                "Ormai sei considerato un 'Anziano'. Sei orgoglioso dei tuoi figli e vuoi lasciare al mondo un lascito di libertà. Ti proponi alle elezioni come ultima buona azione della tua vita! Cosa proponi?"];
 let testoPulsante1 = ["No", "Sarà giusto così", "Mi interessa...", "Credo al sentito dire", "Normalmente", "Li crescerò come sono stato cresciuto io", "Applicazione di leggi più \"libere\""];
-let testoPulsante2 = ["Si, ne parlerò con i miei genitori", "Ne parlo con i miei", "Non mi interessano", "Cerco dei libri tra amici e cugini", "Parlando dei suoi diritti perduti", "Li crescerò raccontandogli piccoli insegnamenti", "Abolizione delle leggi peggiori"]
+let testoPulsante2 = ["Si, ne parlerò con i miei genitori", "Ne parlo con i miei", "Non mi interessano", "Cerco dei libri tra amici e cugini", "Parlando dei suoi diritti perduti", "Li crescerò raccontandogli piccoli insegnamenti", "Abolizione delle leggi peggiori"];
+let testoPulsante3 = ["Si, ne parlerò a scuola", "Protesto per far si che non siano obbligate", "Dovrei chiedere il loro parere, no?", "Cerco libri in giro per i mercati", "Andando in giro non curanti delle leggi", "Li crescero senza mandarli alle scuole \"talebane\"", "Abolizione del dominio talebano e liberazione dell'Afghanistan"];
+
+
 
 var counterArrays = 0;
 var nBtnVar = "";
-var btn3var = [0, "Protesto per far si che non siano obbligate", "Dovrei chiedere il loro parere, no?", "Cerco libri in giro per i mercati", "Andando in giro non curanti delle leggi", "Li crescero senza mandarli alle scuole 'talebane'", "Abolizione del dominio talebano e liberazione dell'Afghanistan"];
 
 var a0 = "Conseguenze: \n \nEssere troppo ingenui, a volte, fa accorgere delle cose quando è troppo tardi";
 var a1 = "Conseguenze: \n \nSperiamo che ti lascino scegliere al 100%";
