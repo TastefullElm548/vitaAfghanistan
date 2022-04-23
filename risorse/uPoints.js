@@ -1,11 +1,11 @@
-var puntiVita = 45;
-var question = [0, 1, 2, 3, 4, 5, 6];
-    question[1] = "La tua famiglia inizia a pensare al futuro tuo, dei tuoi fratelli e delle tue sorelle. Ti dicono che te e i tuoi fratelli sarete promessi sposi alla ragazza che vorrete, mentre le tue sorelle dovranno accettare le proposte degli altri uomini. Cosa ne pensi?";
-    question[2] = "È arrivato il tuo turno. La tua famiglia si offre per aiutare la famiglia delle tue cugine e ti chiede se te ne interessa una. Cosa vuoi rispondere?";
-    question[3] = "Vorresti leggere queste leggi, i libri sacri che ti riguardano e scoprire la storia dell'Afghanistan. Cosa fai?";
-    question[4] = "Finalmente ti sposi. Tua moglie sembra preoccupata per ciò che le è stato raccontato dopo il matrimonio, ma tu sei diverso! Tu sei migliore! Come passi la prima giornata 'normale' con lei?";
-    question[5] = "Decidete di avere dei figli. Come agirete?";
-    question[6] = "Ormai sei considerato un 'Anziano'. Sei orgoglioso dei tuoi figli e vuoi lasciare al mondo un lascito di libertà. Ti proponi alle elezioni come ultima buona azione della tua vita! Cosa proponi?";
+let puntiVita = 45;
+let domande = ["Sei nato in Afghanistan e, da allora, ti è stato insegnato che sei più importante delle tue sorelle, che dovrai lavorare e che il loro scopo è solo quello di fare figli per continuare un'altra famiglia. Ti stai facendo qualche domanda?",
+                 "La tua famiglia inizia a pensare al futuro tuo, dei tuoi fratelli e delle tue sorelle. Ti dicono che te e i tuoi fratelli sarete promessi sposi alla ragazza che vorrete, mentre le tue sorelle dovranno accettare le proposte degli altri uomini. Cosa ne pensi?",
+                 "È arrivato il tuo turno. La tua famiglia si offre per aiutare la famiglia delle tue cugine e ti chiede se te ne interessa una. Cosa vuoi rispondere?",
+                 "Vorresti leggere queste leggi, i libri sacri che ti riguardano e scoprire la storia dell'Afghanistan. Cosa fai?",
+                 "Finalmente ti sposi. Tua moglie sembra preoccupata per ciò che le è stato raccontato dopo il matrimonio, ma tu sei diverso! Tu sei migliore! Come passi la prima giornata 'normale' con lei?",
+                 "Decidete di avere dei figli. Come agirete?",
+                 "Ormai sei considerato un 'Anziano'. Sei orgoglioso dei tuoi figli e vuoi lasciare al mondo un lascito di libertà. Ti proponi alle elezioni come ultima buona azione della tua vita! Cosa proponi?"];
 var counterArrays = 0;
 var nBtnVar = "";
 var btn1var = [0, "Sarà giusto così", "Mi interessa...", "Credo al sentito dire", "Normalmente", "Li crescerò come sono stato cresciuto io", "Applicazione di leggi più 'libere'"];
@@ -54,7 +54,7 @@ function explain() {
 }
 function nextQuestion() {
     counterArrays = counterArrays + 1;
-    document.getElementById("domanda").textContent = question[counterArrays]
+    document.getElementById("domanda").textContent = domande[counterArrays]
     document.getElementById("btn1").textContent = btn1var[counterArrays]
     document.getElementById("btn2").textContent = btn2var[counterArrays]
     document.getElementById("btn3").textContent = btn3var[counterArrays]

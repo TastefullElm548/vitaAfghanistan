@@ -22,7 +22,7 @@ function seleziona(genere) {
         }
     }   else if (genere === "uomo") {
         if (confirm("Vuoi Continuare come Uomo? \n \n Le scelte riguarderanno il tuo pensiero nei confronti dei diritti delle donne e dei talebani, fai la cosa giusta riuscendo a sopravvivere \n \n Livello di difficoltà: Medio") == true) {
-            vai('../play/uomo/uomo.html');
+            vai('../play/uomo/');
         }
     }
 }
