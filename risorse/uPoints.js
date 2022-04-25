@@ -1,6 +1,6 @@
 let puntiVita = 45;
 
-let domande = ["Sei nato in Afghanistan e, da allora, ti è stato insegnato che sei più importante delle tue sorelle, che dovrai lavorare e che il loro scopo è solo quello di fare figli per continuare un'altra famiglia. Ti stai facendo qualche domanda?",
+const domande = ["Sei nato in Afghanistan e, da allora, ti è stato insegnato che sei più importante delle tue sorelle, che dovrai lavorare e che il loro scopo è solo quello di fare figli per continuare un'altra famiglia. Ti stai facendo qualche domanda?",
                "La tua famiglia inizia a pensare al futuro tuo, dei tuoi fratelli e delle tue sorelle. Ti dicono che te e i tuoi fratelli sarete promessi sposi alla ragazza che vorrete, mentre le tue sorelle dovranno accettare le proposte degli altri uomini. Cosa ne pensi?",
                "È arrivato il tuo turno. La tua famiglia si offre per aiutare la famiglia delle tue cugine e ti chiede se te ne interessa una. Cosa vuoi rispondere?",
                "Vorresti leggere queste leggi, i libri sacri che ti riguardano e scoprire la storia dell'Afghanistan. Cosa fai?",
@@ -8,9 +8,9 @@ let domande = ["Sei nato in Afghanistan e, da allora, ti è stato insegnato che 
                "Decidete di avere dei figli. Come agirete?",
                "Ormai sei considerato un 'Anziano'. Sei orgoglioso dei tuoi figli e vuoi lasciare al mondo un lascito di libertà. Ti proponi alle elezioni come ultima buona azione della tua vita! Cosa proponi?"];
 
-let testoPulsante1 = ["No", "Sarà giusto così", "Mi interessa...", "Credo al sentito dire", "Normalmente", "Li crescerò come sono stato cresciuto io", "Applicazione di leggi più \"libere\""];
-let testoPulsante2 = ["Si, ne parlerò con i miei genitori", "Ne parlo con i miei", "Non mi interessano", "Cerco dei libri tra amici e cugini", "Parlando dei suoi diritti perduti", "Li crescerò raccontandogli piccoli insegnamenti", "Abolizione delle leggi peggiori"];
-let testoPulsante3 = ["Si, ne parlerò a scuola", "Protesto per far si che non siano obbligate", "Dovrei chiedere il loro parere, no?", "Cerco libri in giro per i mercati", "Andando in giro non curanti delle leggi", "Li crescero senza mandarli alle scuole \"talebane\"", "Abolizione del dominio talebano e liberazione dell'Afghanistan"];
+const testoPulsante1 = ["No", "Sarà giusto così", "Mi interessa...", "Credo al sentito dire", "Normalmente", "Li crescerò come sono stato cresciuto io", "Applicazione di leggi più \"libere\""];
+const testoPulsante2 = ["Si, ne parlerò con i miei genitori", "Ne parlo con i miei", "Non mi interessano", "Cerco dei libri tra amici e cugini", "Parlando dei suoi diritti perduti", "Li crescerò raccontandogli piccoli insegnamenti", "Abolizione delle leggi peggiori"];
+const testoPulsante3 = ["Si, ne parlerò a scuola", "Protesto per far si che non siano obbligate", "Dovrei chiedere il loro parere, no?", "Cerco libri in giro per i mercati", "Andando in giro non curanti delle leggi", "Li crescero senza mandarli alle scuole \"talebane\"", "Abolizione del dominio talebano e liberazione dell'Afghanistan"];
 
 // Miglioro Variabili e Sistemo Funzioni sotto questa linea
 
