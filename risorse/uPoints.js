@@ -12,18 +12,27 @@ const testoPulsante1 = ["No", "Sarà giusto così", "Mi interessa...", "Credo al
 const testoPulsante2 = ["Si, ne parlerò con i miei genitori", "Ne parlo con i miei", "Non mi interessano", "Cerco dei libri tra amici e cugini", "Parlando dei suoi diritti perduti", "Li crescerò raccontandogli piccoli insegnamenti", "Abolizione delle leggi peggiori"];
 const testoPulsante3 = ["Si, ne parlerò a scuola", "Protesto per far si che non siano obbligate", "Dovrei chiedere il loro parere, no?", "Cerco libri in giro per i mercati", "Andando in giro non curanti delle leggi", "Li crescero senza mandarli alle scuole \"talebane\"", "Abolizione del dominio talebano e liberazione dell'Afghanistan"];
 
+const conseguenzePulsante1 = ["Conseguenze: \n \nEssere troppo ingenui, a volte, fa accorgere delle cose quando è troppo tardi", "Conseguenze: \n \nSperiamo che ti lascino scegliere al 100%", "Conseguenze: \n \nFamiglia Imparentata: \nOgni tuo desiderio è un ordine per noi", "Conseguenze: \n \nL'ignoranza semplifica la vita, ma non ti porterà mai alla realizzazione e alla felicità vera", "Conseguenze: \n \nNon è mai troppo tardi per il cambiamento! (cit. AWorld)", "Conseguenze: \n \nÈ probabile che seguiranno i tuoi esempi nonostante ciò!", "Conseguenze: \n \nHai concluso la tua vita in modo dignitoso. Sei morto da eroe! I talebani ti vedono come un nemico della patria e cercano di ucciderti, fuggi all'estero verso l'Europa e speri che i tuoi figli, quando non ci sarai più, riporteranno l'Afghanistan al suo antico splendore! Addio Combattente!"];
+const conseguenzePulsante2 = [];
+const conseguenzePulsante3 = [];
+
+function cambiaConseguenze(numeroPulsante, reputazioneDaPerdere) {
+    document.getElementById("numeroPulsante").setAttribute('onclick',"avanti('numeroPulsante', reputazioneDaPerdere)");
+}
+
+function apriSpiegazione(numeroPulsante, numeroDomanda) {
+    if (numeroPulsante === 1) {
+        alert(conseguenzePulsante1[numeroDomanda]);
+    } else if (numeroPulsante === 2) {
+        alert(conseguenzePulsante2[numeroDomanda]);
+    } else if (numeroPulsante === 3) {
+        alert(conseguenzePulsante3[numeroDomanda]);
+    }
+}
 // Miglioro Variabili e Sistemo Funzioni sotto questa linea
 
 var counterArrays = 0;
 var nBtnVar = "";
-
-var a0 = "Conseguenze: \n \nEssere troppo ingenui, a volte, fa accorgere delle cose quando è troppo tardi";
-var a1 = "Conseguenze: \n \nSperiamo che ti lascino scegliere al 100%";
-var a2 = "Conseguenze: \n \nFamiglia Imparentata: \nOgni tuo desiderio è un ordine per noi";
-var a3 = "Conseguenze: \n \nL'ignoranza semplifica la vita, ma non ti porterà mai alla realizzazione e alla felicità vera";
-var a4 = "Conseguenze: \n \nNon è mai troppo tardi per il cambiamento! (cit. AWorld)";
-var a5 = "Conseguenze: \n \nÈ probabile che seguiranno i tuoi esempi nonostante ciò!";
-var a6 = "Conseguenze: \n \nHai concluso la tua vita in modo dignitoso. Sei morto da eroe! I talebani ti vedono come un nemico della patria e cercano di ucciderti, fuggi all'estero verso l'Europa e speri che i tuoi figli, quando non ci sarai più, riporteranno l'Afghanistan al suo antico splendore! Addio Combattente!";
 
 var b0 = "Conseguenze: \n \nTi spiegano la situazione e ti sembrano un po' preoccupati per te";
 var b1 = "Conseguenze: \n \nTi spiegano che le donne sono solo oggetti di scambio con le altre famiglie e anche tu ne riceverai una. Ciò non ti sembra giusto";
@@ -41,22 +50,6 @@ var c4 = "Conseguenze: \n \nI talebani ti guardano ancora male";
 var c5 = "Conseguenze: \n \nI talebani ti scoprono mentre tenti di 'corrompere' i tuoi figli e ti arrestano! La tua avventura finisce qui :(";
 var c6 = "Conseguenze: \n \nHai concluso la tua vita in modo dignitoso. Sei morto da eroe! I talebani ti vedono come un nemico della patria e cercano di ucciderti, fuggi all'estero verso l'Europa e speri che i tuoi figli, quando non ci sarai più, riporteranno l'Afghanistan al suo antico splendore! Addio Combattente!";
 
-var spiegazione1 = [a0, a1, a2, a3, a4, a5, a6];
-var spiegazione2 = [b0, b1, b2, b3, b4, b5, b6];
-var spiegazione3 = [c0, c1, c2, c3, c4, c5, c6];
-
-
-function explain() {
-    if (nBtnVar === 1) {
-        alert(spiegazione1[counterArrays]);
-    }
-    else if (nBtnVar === 2) {
-        alert(spiegazione2[counterArrays]);
-    }
-    else if (nBtnVar === 3) {
-        alert(spiegazione3[counterArrays]);
-    }
-}
 function nextQuestion() {
     counterArrays = counterArrays + 1;
     document.getElementById("domanda").textContent = domande[counterArrays]
@@ -88,23 +81,23 @@ function vittoria() {
     setTimeout(fineGiocoVinto(), 5000);
 }
 
-function next(danno, nBtn) {
+function next(numeroPulsante, reputazionePersa) {
     puntiVita = puntiVita - danno;
     document.getElementById("counter").textContent = puntiVita;
     nBtnVar = nBtn
     if (counterArrays === 2) {
-        document.getElementById("btn3").setAttribute('onclick',"next(puntiVita, 3)"); //Cambio costo 3^ Azione a tutta la vita
+        document.getElementById("btn3").setAttribute('onclick',"next(3, puntiVita)"); //Cambio costo 3^ Azione a tutta la vita
     }
     else if (counterArrays === 3) {
-        document.getElementById("btn3").setAttribute('onclick',"next(10, 3)"); //Cambio costo 3^ Azione al costo iniziale
+        document.getElementById("btn3").setAttribute('onclick',"next(3, 10)"); //Cambio costo 3^ Azione al costo iniziale
     }
     if (counterArrays === 4) {
-        document.getElementById("btn3").setAttribute('onclick',"next(puntiVita, 3)"); //Cambio costo 3^ Azione a tutta la vita
+        document.getElementById("btn3").setAttribute('onclick',"next(3, puntiVita)"); //Cambio costo 3^ Azione a tutta la vita
     }
     else if (counterArrays === 5) {
-        document.getElementById("btn1").setAttribute('onclick',"next(0, 1)"); //Cambio costo 1^ Azione al costo iniziale
-        document.getElementById("btn2").setAttribute('onclick',"next(0, 2)"); //Cambio costo 2^ Azione al costo iniziale
-        document.getElementById("btn3").setAttribute('onclick',"next(0, 3)"); //Cambio costo 3^ Azione al costo iniziale
+        document.getElementById("btn1").setAttribute('onclick',"next(1, 0)"); //Cambio costo 1^ Azione al costo iniziale
+        document.getElementById("btn2").setAttribute('onclick',"next(2, 0)"); //Cambio costo 2^ Azione al costo iniziale
+        document.getElementById("btn3").setAttribute('onclick',"next(3, 0)"); //Cambio costo 3^ Azione al costo iniziale
     }
 
     explain();
