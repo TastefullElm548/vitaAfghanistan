@@ -29,6 +29,23 @@ function apriSpiegazione(numeroPulsante, numeroDomanda) {
         alert(conseguenzePulsante3[numeroDomanda]);
     }
 }
+
+function mostraRisultato(risultato) {
+    if (risultato === "vittoria") {
+        document.getElementById("titolo").textContent = "Hai Vinto!";
+    } else if (risultato === "sconfitta") {
+        document.getElementById("titolo").textContent = "Hai Perso!";
+    }
+    setTimeout(chiudiGioco(risultato), 5000);
+}
+
+function chiudiGioco(risultato) {
+    if (risultato === "vittoria") {
+        window.location.replace('vittoria/index.html');
+    } else if (risultato === "sconfitta") {
+        window.location.replace('sconfitta/index.html')
+    }
+}
 // Miglioro Variabili e Sistemo Funzioni sotto questa linea
 
 var counterArrays = 0;
@@ -44,25 +61,6 @@ function nextQuestion() {
 
 function indietro() {
     window.history.go(-2)
-}
-
-function fineGiocoVinto() {
-    window.location.replace('vittoria.html');
-}
-function fineGiocoPerso() {
-    window.location.replace('sconfitta.html');
-}
-
-function vittoria() {
-    document.getElementById("titolo").textContent = "Hai Vinto!";
-    // If inutilizzato --> Trasferito in fineGiocoVinto()
-    if (puntiVita >= 50) {
-        document.getElementById("domanda").textContent = "Sei riuscita a sopravvivere ad una vita oppressa dai talebani! 🏆";
-    }
-    else if (puntiVita <= 45) {
-        document.getElementById("domanda").textContent = "Sei sopravvissuta per un pelo. Speriamo che il tuo esempio serva a formare una società migliore un domani! ⭐";
-    }
-    setTimeout(fineGiocoVinto(), 5000);
 }
 
 function next(numeroPulsante, reputazionePersa) {
@@ -86,11 +84,11 @@ function next(numeroPulsante, reputazionePersa) {
 
     explain();
     if (puntiVita <= 0) {
-        fineGiocoPerso();
+        mostraRisultato("sconfitta");
     } 
 
     if (counterArrays === 6) {
-        vittoria();
+        mostraRisultato("vittoria");
     }
     else {
         nextQuestion();
