@@ -14,7 +14,7 @@ const testoPulsante3 = ["Si, ne parlerò a scuola", "Protesto per far si che non
 
 const conseguenzePulsante1 = ["Conseguenze: \n \nEssere troppo ingenui, a volte, fa accorgere delle cose quando è troppo tardi", "Conseguenze: \n \nSperiamo che ti lascino scegliere al 100%", "Conseguenze: \n \nFamiglia Imparentata: \nOgni tuo desiderio è un ordine per noi", "Conseguenze: \n \nL'ignoranza semplifica la vita, ma non ti porterà mai alla realizzazione e alla felicità vera", "Conseguenze: \n \nNon è mai troppo tardi per il cambiamento! (cit. AWorld)", "Conseguenze: \n \nÈ probabile che seguiranno i tuoi esempi nonostante ciò!", "Conseguenze: \n \nHai concluso la tua vita in modo dignitoso. Sei morto da eroe! I talebani ti vedono come un nemico della patria e cercano di ucciderti, fuggi all'estero verso l'Europa e speri che i tuoi figli, quando non ci sarai più, riporteranno l'Afghanistan al suo antico splendore! Addio Combattente!"];
 const conseguenzePulsante2 = ["Conseguenze: \n \nTi spiegano la situazione e ti sembrano un po' preoccupati per te", "Conseguenze: \n \nTi spiegano che le donne sono solo oggetti di scambio con le altre famiglie e anche tu ne riceverai una. Ciò non ti sembra giusto", "Conseguenze: \n \nLa tua famiglia: \nVabbé, abbiamo tanti cugini e tanti amici ancora...", "Conseguenze: \n \nGli altri non capiscono questo tuo desiderio e ti scherniscono", "Conseguenze: \n \nLei si sta rilassando perché pensa di poter vivere un futuro migliore!", "Conseguenze: \n \nQuesti sono la parte più importante dell'educazione dei figli. Continua così!", "Conseguenze: \n \nHai concluso la tua vita in modo dignitoso. Sei morto da eroe! I talebani ti vedono come un nemico della patria e cercano di ucciderti, fuggi all'estero verso l'Europa e speri che i tuoi figli, quando non ci sarai più, riporteranno l'Afghanistan al suo antico splendore! Addio Combattente!"];
-const conseguenzePulsante3 = [];
+const conseguenzePulsante3 = ["Conseguenze: \n \nTi urlano di non lasciare che pensieri incostituzionali ti entrino in mente e iniziano a guardarti male", "Conseguenze: \n \nI tuoi genitori ti picchiano perché non devi opporti alla legge!", "Conseguenze: \n \nTalebani: \nNon violare le leggi! Criminale! Ti teniamo d'occhio!", "Conseguenze: \n \nI Talebani ti scoprono e ti arrestano. La tua avventura è finita :(", "Conseguenze: \n \nI talebani ti guardano ancora male", "Conseguenze: \n \nI talebani ti scoprono mentre tenti di 'corrompere' i tuoi figli e ti arrestano! La tua avventura finisce qui :(", "Conseguenze: \n \nHai concluso la tua vita in modo dignitoso. Sei morto da eroe! I talebani ti vedono come un nemico della patria e cercano di ucciderti, fuggi all'estero verso l'Europa e speri che i tuoi figli, quando non ci sarai più, riporteranno l'Afghanistan al suo antico splendore! Addio Combattente!"];
 
 function cambiaConseguenze(numeroPulsante, reputazioneDaPerdere) {
     document.getElementById("numeroPulsante").setAttribute('onclick',"avanti('numeroPulsante', reputazioneDaPerdere)");
@@ -33,14 +33,6 @@ function apriSpiegazione(numeroPulsante, numeroDomanda) {
 
 var counterArrays = 0;
 var nBtnVar = "";
-
-var c0 = "Conseguenze: \n \nTi urlano di non lasciare che pensieri incostituzionali ti entrino in mente e iniziano a guardarti male";
-var c1 = "Conseguenze: \n \nI tuoi genitori ti picchiano perché non devi opporti alla legge!";
-var c2 = "Conseguenze: \n \nTalebani: \nNon violare le leggi! Criminale! Ti teniamo d'occhio!";
-var c3 = "Conseguenze: \n \nI Talebani ti scoprono e ti arrestano. La tua avventura è finita :(";
-var c4 = "Conseguenze: \n \nI talebani ti guardano ancora male";
-var c5 = "Conseguenze: \n \nI talebani ti scoprono mentre tenti di 'corrompere' i tuoi figli e ti arrestano! La tua avventura finisce qui :(";
-var c6 = "Conseguenze: \n \nHai concluso la tua vita in modo dignitoso. Sei morto da eroe! I talebani ti vedono come un nemico della patria e cercano di ucciderti, fuggi all'estero verso l'Europa e speri che i tuoi figli, quando non ci sarai più, riporteranno l'Afghanistan al suo antico splendore! Addio Combattente!";
 
 function nextQuestion() {
     counterArrays = counterArrays + 1;
