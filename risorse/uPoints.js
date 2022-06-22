@@ -1,7 +1,7 @@
-let reputazione = 45;
+var reputazione = 45;
 let numeroDomanda = 0;
 let numeroPulsante;
-let reputazioneDaPerdere;
+let reputazioneDaPerdere = 0;
 
 let domande = ["Sei nato in Afghanistan e, da allora, ti è stato insegnato che sei più importante delle tue sorelle, che dovrai lavorare e che il loro scopo è solo quello di fare figli per continuare un'altra famiglia. Ti stai facendo qualche domanda?",
                "La tua famiglia inizia a pensare al futuro tuo, dei tuoi fratelli e delle tue sorelle. Ti dicono che te e i tuoi fratelli sarete promessi sposi alla ragazza che vorrete, mentre le tue sorelle dovranno accettare le proposte degli altri uomini. Cosa ne pensi?",
@@ -19,14 +19,6 @@ let conseguenzePulsante1 = ["Conseguenze: \n \nEssere troppo ingenui, a volte, f
 let conseguenzePulsante2 = ["Conseguenze: \n \nTi spiegano la situazione e ti sembrano un po' preoccupati per te", "Conseguenze: \n \nTi spiegano che le donne sono solo oggetti di scambio con le altre famiglie e anche tu ne riceverai una. Ciò non ti sembra giusto", "Conseguenze: \n \nLa tua famiglia: \nVabbé, abbiamo tanti cugini e tanti amici ancora...", "Conseguenze: \n \nGli altri non capiscono questo tuo desiderio e ti scherniscono", "Conseguenze: \n \nLei si sta rilassando perché pensa di poter vivere un futuro migliore!", "Conseguenze: \n \nQuesti sono la parte più importante dell'educazione dei figli. Continua così!", "Conseguenze: \n \nHai concluso la tua vita in modo dignitoso. Sei morto da eroe! I talebani ti vedono come un nemico della patria e cercano di ucciderti, fuggi all'estero verso l'Europa e speri che i tuoi figli, quando non ci sarai più, riporteranno l'Afghanistan al suo antico splendore! Addio Combattente!"];
 let conseguenzePulsante3 = ["Conseguenze: \n \nTi urlano di non lasciare che pensieri incostituzionali ti entrino in mente e iniziano a guardarti male", "Conseguenze: \n \nI tuoi genitori ti picchiano perché non devi opporti alla legge!", "Conseguenze: \n \nTalebani: \nNon violare le leggi! Criminale! Ti teniamo d'occhio!", "Conseguenze: \n \nI Talebani ti scoprono e ti arrestano. La tua avventura è finita :(", "Conseguenze: \n \nI talebani ti guardano ancora male", "Conseguenze: \n \nI talebani ti scoprono mentre tenti di 'corrompere' i tuoi figli e ti arrestano! La tua avventura finisce qui :(", "Conseguenze: \n \nHai concluso la tua vita in modo dignitoso. Sei morto da eroe! I talebani ti vedono come un nemico della patria e cercano di ucciderti, fuggi all'estero verso l'Europa e speri che i tuoi figli, quando non ci sarai più, riporteranno l'Afghanistan al suo antico splendore! Addio Combattente!"];
 
-function modificaContenuto(elemento, contenuto) {
-    document.getElementById(elemento).innerText = contenuto;
-}
-
-function cambiaConseguenze(numeroPulsante, reputazioneDaPerdere) {
-    document.getElementById(numeroPulsante).setAttribute('onclick', avanti(numeroPulsante, reputazioneDaPerdere));
-}
-
 function apriSpiegazione(numeroPulsante, numeroDomanda) {
     if (numeroPulsante === 'pulsante1') {
         alert(conseguenzePulsante1[numeroDomanda]);
@@ -37,23 +29,6 @@ function apriSpiegazione(numeroPulsante, numeroDomanda) {
     }
 }
 
-function mostraRisultato(risultato) {
-    if (risultato === "vittoria") {
-        modificaContenuto("titolo", "Hai Vinto!");
-    } else if (risultato === "sconfitta") {
-        modificaContenuto("titolo", "Hai Perso!");
-    }
-    setTimeout(chiudiGioco(risultato), 5000);
-}
-
-function chiudiGioco(risultato) {
-    if (risultato === "vittoria") {
-        window.location.replace('vittoria/index.html');
-    } else if (risultato === "sconfitta") {
-        window.location.replace('sconfitta/index.html');
-    }
-}
-
 function apriNuovaDomanda(numeroDomanda) {
     modificaContenuto("domanda", domande[numeroDomanda]);
     modificaContenuto('pulsante1', testoPulsante1[numeroDomanda]);
@@ -61,25 +36,25 @@ function apriNuovaDomanda(numeroDomanda) {
     modificaContenuto('pulsante3', testoPulsante3[numeroDomanda]);  
 }
 
-function avanti(numeroPulsante, reputazionePersa) {
-    reputazione = reputazione - reputazionePersa;
+function avanti(numeroPulsante, reputazioneDaPerdere) {    
+    reputazione = reputazione - reputazioneDaPerdere;
     modificaContenuto("punteggio", reputazione);
     if (numeroDomanda === 2) {
-        cambiaConseguenze('pulsante3', reputazione); //Cambio costo 3^ Azione a tutta la reputazione
+        document.getElementById('pulsante3').setAttribute('onclick', "avanti('pulsante3', reputazione)"); //Cambio costo 3^ Azione a tutta la reputazione
     } else if (numeroDomanda === 3) {
-        cambiaConseguenze('pulsante3', 10); //Cambio costo 3^ Azione al costo iniziale
+        document.getElementById('pulsante3').setAttribute('onclick', "avanti('pulsante3', 10)"); //Cambio costo 3^ Azione al costo iniziale
     } else if (numeroDomanda === 4) {
-        cambiaConseguenze('pulsante3', reputazione); //Cambio costo 3^ Azione a tutta la reputazione
-    } else if (numeroDomanda === 5) { //Cambio costo azioni a 0
-        cambiaConseguenze('pulsante1', 0);
-        cambiaConseguenze('pulsante2', 0);
-        cambiaConseguenze('pulsante3', 0);
+        document.getElementById('pulsante3').setAttribute('onclick', "avanti('pulsante3', reputazione)"); //Cambio costo 3^ Azione a tutta la reputazione
+    } else if (numeroDomanda === 5) {
+        document.getElementById('pulsante1').setAttribute('onclick', "avanti('pulsante1', 0)"); //Cambio costo azioni a 0
+        document.getElementById('pulsante2').setAttribute('onclick', "avanti('pulsante2', 0)");
+        document.getElementById('pulsante3').setAttribute('onclick', "avanti('pulsante3', 0)");
     }
     apriSpiegazione(numeroPulsante, numeroDomanda);
     if (reputazione <= 0) {
-        mostraRisultato("sconfitta");
+        vai("sconfitta");
     } else if (numeroDomanda === 6) {
-        mostraRisultato("vittoria");
+        vai("vittoria");
     } else {
         numeroDomanda = numeroDomanda + 1;
         apriNuovaDomanda(numeroDomanda);
