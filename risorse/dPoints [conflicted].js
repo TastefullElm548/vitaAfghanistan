@@ -1,4 +1,13 @@
 var puntiVita = 45;
+let numeroDomanda = 0;
+let numeroPulsante;
+let reputazioneDaPerdere = 0;
+
+
+
+
+///////////////////////////////////////////////
+
 var question = [0, 1, 2, 3, 4, 5, 6];
     question[1] = "È ora! Hai superato 10 anni di vita! Sei abbastanza grande per iniziare ad indossare il velo ogni volta che esci di casa. Ti velerai?";
     question[2] = "I tuoi genitori e i tuoi fratelli non apprezzano molto lo sport nazionale, il buzkashi (vedi masos.my.to/vita-afghanistan/buzkashi), e anche i talebani erano d'accordo con loro, una volta. Ora anche alcuni loro comandanti ci giocano! Ma torniamo a te e alla tua famiglia. Apprezzate molto di più il calcio, e tu, molto curiosa, ci giochi con i tuoi fratelli, in casa, e dimostri che loro non sono così più forti di te! Vuoi coltivare questa passione?";

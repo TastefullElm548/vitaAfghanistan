@@ -3,7 +3,7 @@ let numeroDomanda = 0;
 let numeroPulsante;
 let reputazioneDaPerdere = 0;
 
-let domande = ["Sei nato in Afghanistan e, da allora, ti è stato insegnato che sei più importante delle tue sorelle, che dovrai lavorare e che il loro scopo è solo quello di fare figli per continuare un'altra famiglia. Ti stai facendo qualche domanda?",
+const domande = ["Sei nato in Afghanistan e, da allora, ti è stato insegnato che sei più importante delle tue sorelle, che dovrai lavorare e che il loro scopo è solo quello di fare figli per continuare un'altra famiglia. Ti stai facendo qualche domanda?",
                "La tua famiglia inizia a pensare al futuro tuo, dei tuoi fratelli e delle tue sorelle. Ti dicono che te e i tuoi fratelli sarete promessi sposi alla ragazza che vorrete, mentre le tue sorelle dovranno accettare le proposte degli altri uomini. Cosa ne pensi?",
                "È arrivato il tuo turno. La tua famiglia si offre per aiutare la famiglia delle tue cugine e ti chiede se te ne interessa una. Cosa vuoi rispondere?",
                "Vorresti leggere queste leggi, i libri sacri che ti riguardano e scoprire la storia dell'Afghanistan. Cosa fai?",
