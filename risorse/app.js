@@ -28,4 +28,12 @@ function seleziona(genere) {
     }
 }
 
-// 
+// Salva Punteggio
+function salvaPunti(puntiPartita) {
+    if (localStorage.getItem('punti') == null) {
+        localStorage.setItem('punti', 0);
+    }
+    let punti = localStorage.getItem('punti');
+    punti += puntiPartita;
+    localStorage.setItem('punti', punti);
+}

@@ -52,8 +52,10 @@ function avanti(numeroPulsante, reputazioneDaPerdere) {
     }
     apriSpiegazione(numeroPulsante, numeroDomanda);
     if (reputazione <= 0) {
+        salvaPunti(reputazione);
         vai("sconfitta");
     } else if (numeroDomanda === 6) {
+        salvaPunti(reputazione);
         vai("vittoria");
     } else {
         numeroDomanda = numeroDomanda + 1;
