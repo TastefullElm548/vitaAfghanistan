@@ -1,0 +1,12 @@
+{
+    "domande": [],
+    "testoPulsante1": [],
+    "testoPulsante2": [],
+    "testoPulsante3": [],
+    "conseguenzePulsante1": [],
+    "conseguenzePulsante2": [],
+    "conseguenzePulsante3": ["Conseguenze: \n \nSei ancora una bambina e i talebani un cuore ancora ce l'hanno, ma solo per fare ciò che gli fa comodo, e quindi non ti toccano neanche, anzi, ti 'offrono' un 'passaggio' a casa. Quando arrivate a casa però se la prendono con i tuoi genitori picchiandoli e, per quanto loro non ti restituiscano il favore, ciò ti fa star male (-10❤️)", "Conseguenze: \n \nI talebani non transigono, 'non puoi metterti in mostra'! (-10❤️)", "Conseguenze: \n \nProvi ad avvicinarti a chi di mestiere, ma i talebani si sono radicati anche nello sport e, nonostante la possibilità di giocare 'non in pubblico e lontano dai media' i talebani sostengono che è troppo pericoloso 'rischiare di mostrarti in pubblico, specialmente se non velata'. Ovviamente come punizioni i talebani saltano le sgridate e vanno alle mani (-10❤️)", "Conseguenze: \n \nSarà sfortuna, ma i talebani decidono di sparare sulla folla. Finisce qui la tua avventura.", "Conseguenze: \n \nI talebani si arrabbiano perché sei una donna e non devi urlare. Ti sparano a vista. Finisce qui la tua avventura :(", "Conseguenze: \n \nPer non essere costretta a subire il matrimonio decidi di ricorrere al suicidio. La tua avventura finisce qui :(", "Conseguenze: \n \nSarà per cattiveria, o per la pressione della società, ma non esita un momento a picchiarti a morte. La tua avventura finisce qui :("],
+    "puntiPulsante1": [0, 0, 0, 0, 0, 0, 0],
+    "puntiPulsante2": [2, 2, 2, 2, 2, 2, 2],
+    "puntiPulsante3": [10, 10, 10, 999, 999, 999, 999]
+}
