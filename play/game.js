@@ -36,7 +36,7 @@ function avanti(pulsante) {
 }
 
 function fine(risultato, mode) {
-    destinazione = "ending?risultato=" + risultato + "&mode=" + mode;
+    destinazione = "ending/?risultato=" + risultato + "&mode=" + mode;
     vai(destinazione);
 }
 
