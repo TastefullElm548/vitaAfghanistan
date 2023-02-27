@@ -6,20 +6,20 @@
     <link rel="stylesheet" href="../../style.css">
     <link rel="icon" type="image/x-icon" href="../../icona.png">
     <script src="../../app.js"></script>
+    <script src="ending.js"></script>
 </head>
-<body>
+<body onload="load()">
   <div class="wrapper">
     <div class="img-area">
       <div class="inner-area">
-        <img src="../../icona.png" alt="Icona Afghanistan">
+        <img src="../../icona.png" alt="Play">
       </div>
     </div>
-    <div class="name" id="titolo">La Vita in Afghanistan</div>
-    <div class="about" id="descrizione">Da che punto di vista vuoi giocare?</div>
+    <div class="name" id="titolo"></div>
+    <div class="about" id="descrizione"></div>
     <br>
     <div class="buttons">
-      <button onclick="seleziona('donna')">👧 Donna</button>
-      <button onclick="seleziona('uomo')">👦 Uomo</button>
+      <button onclick="vai('../../')">Gioca Ancora</button>
     </div>
   </div>
 </body>

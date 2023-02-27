@@ -18,9 +18,11 @@ async function getDonnaData() {
 async function load() {
     if (ottieniParametri("mode") === "donna") {
         data = await getDonnaData();
+        modificaContenuto("logoPunteggio", "❤️");
         nuovaDomanda(0, data);
     } else if (ottieniParametri("mode") === "uomo") {
         data = await getUomoData();
+        modificaContenuto("logoPunteggio", "⚠️");
         nuovaDomanda(0, data);
     } else {
         vai("select")
