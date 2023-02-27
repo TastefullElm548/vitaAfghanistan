@@ -2,8 +2,8 @@
 
 Gioco interattivo per comprendere meglio la condizione della donna in Afghanistan
 
-Giocabile online su https://masos.my.to/vita-afghanistan
+Giocabile online su https://tastefullelm.my.to/vitaAfghanistan/
 
 ---
 
-È disponibile la versione originale con codice meno perfezionato su https://masos.my.to/vita-afghanistan/download
+È disponibile la versione originale con codice meno perfezionato nelle relases
