@@ -63,6 +63,11 @@ body{
   text-align: center;
 }
 
+.about,
+#vita{
+  margin-bottom: 20px;
+}
+
 .buttons button:hover:before{
   content: "";
   position: absolute;
