@@ -17,16 +17,16 @@ function download() {
 
 // Cambia Visualizzazione tra Informazioni e Fonti
 function cambiaVisualizzazione() {
-    if (document.getElementById("titolo").innerText === "Informazioni") {
-        const Fonti = '<a href="https://gazzetta.it/Sport-Vari/storie/03-11-2021/afghanistan-talebani-dicono-si-buzkashi-4202205681648/">La Gazzetta dello Sport</a><br><a href="https://actionaid.it/informati/notizie/come-vivono-donne-afghanistan-testimonianze">Actionaid</a><br><a href="https://wikipedia.org/">Wikipedia/Wikimedia (Pagine Multiple)</a><br><a href="https://ilsole24ore.com/art/afghanistan-tutti-diritti-negati-donne-AEDgIhh">Il Sole 24 Ore</a>';
-        modificaContenuto("titolo", "Fonti");
-        modificaContenuto("descrizione", Fonti);
-        modificaContenuto("secondoPulsante", "Informazioni")
-    } else if (document.getElementById("titolo").innerText === "Fonti") {
-        const Informazioni = '<h4>Come Giocare:</h4><p>Premere un\'azione per scegliere il proprio futuro</p><h4>Modalità di Gioco:</h4><p><b>Donna:</b> le scelte contro i talebani e la Sharia fanno perdere punti vita. Se si arriva a 0 si perde.</p><p><b>Uomo:</b> le scelte contro i talebani e la Sharia riducono la propria reputazione. Se si raggiunge 0 si viene arrestati e si perde.</p><h4>Si inizia con 45 punti vita (<a href="https://web.archive.org/web/20220101131400/https://it.wikipedia.org/wiki/Afghanistan#Istituzione_della_AUAF" target="_blank">Perché 45?</a>)</h4>';
+    if (document.getElementById("titolo").innerText === "La Vita in Afghanistan") {
+        const Informazioni = '<h4>Modalità di Gioco:</h4><p><b>Donna:</b> le scelte contro i talebani e la Sharia fanno perdere punti vita.</p><p><b>Uomo:</b> le scelte contro i talebani e la Sharia riducono la propria reputazione.</p><p><b>Si inizia con 45 punti (<a href="https://web.archive.org/web/20220101131400/https://it.wikipedia.org/wiki/Afghanistan#Istituzione_della_AUAF" target="_blank">Perché 45?</a>)</b></p><br><h4>Fonti:</h4><a href="https://gazzetta.it/Sport-Vari/storie/03-11-2021/afghanistan-talebani-dicono-si-buzkashi-4202205681648/" target="_blank">La Gazzetta dello Sport</a><br><a href="https://actionaid.it/informati/notizie/come-vivono-donne-afghanistan-testimonianze" target="_blank">Actionaid</a><br><a href="https://wikipedia.org/  target="_blank"">Wikipedia/Wikimedia (Pagine Multiple)</a><br><a href="https://ilsole24ore.com/art/afghanistan-tutti-diritti-negati-donne-AEDgIhh" target="_blank">Il Sole 24 Ore</a>';
         modificaContenuto("titolo", "Informazioni");
         modificaContenuto("descrizione", Informazioni);
-        modificaContenuto("secondoPulsante", "Fonti")
+        modificaContenuto("secondoPulsante", "Home")
+    } else if (document.getElementById("titolo").innerText === "Informazioni") {
+        const homeText = '"Vivi" dal punto di vista di un/una Afghano/a e prova a sopravvivere nonostante le leggi dei talebani!';
+        modificaContenuto("titolo", "La Vita in Afghanistan");
+        modificaContenuto("descrizione", homeText);
+        modificaContenuto("secondoPulsante", "Informazioni")
     }
 }
 
