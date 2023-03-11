@@ -10,7 +10,7 @@ function vai(destinazione) {
 
 // Download Versione Originale
 function download() {
-    window.open("https://masos.my.to/vita-afghanistan/download");
+    window.open("https://github.com/TastefullElm548/vitaAfghanistan/releases/download/Originale/VitaAfghanistan.zip");
     modificaContenuto("descrizione", "Grazie per aver scaricato la versione originale de 'La Vita in Afghanistan'. Se il download non parte cliccare nuovamente su Download.");
     modificaContenuto("primoPulsante", "Download");
 }
